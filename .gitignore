@@ -20,6 +20,3 @@ pg_data/
 *.cfg
 *.conf
 webserver_config.py
-
-logs
-plugins

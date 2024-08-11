@@ -21,3 +21,6 @@ pg_data/
 *.conf
 webserver_config.py
 
+# Airflow
+logs
+plugins

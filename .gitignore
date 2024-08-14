@@ -21,4 +21,5 @@ pg_data/
 *.conf
 webserver_config.py
 
-# Airflow
+*.png
+*.jpg

@@ -6,7 +6,7 @@ This project involves an end-to-end ETL process using the Brazilian E-Commerce d
 
 ## Data Architecture
 
-![Group 9](https://github.com/user-attachments/assets/11df794b-b3bf-4aae-982f-1d0bbdfa0845)
+![Group 9 (1)](https://github.com/user-attachments/assets/a466a39c-e164-4d93-8b9a-ee47d1162455)
 
 ## Project Structure
 

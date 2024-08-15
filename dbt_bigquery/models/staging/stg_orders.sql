@@ -8,9 +8,9 @@ SELECT
     oi.price
 FROM
     raw_ecomm_data.orders AS o
-JOIN
+LEFT JOIN
     raw_ecomm_data.customers AS c ON o.customer_id = c.customer_id
-JOIN
+LEFT JOIN
     raw_ecomm_data.order_items AS oi ON o.order_id = oi.order_id
-JOIN
+LEFT JOIN
     raw_ecomm_data.products AS p ON oi.product_id = p.product_id

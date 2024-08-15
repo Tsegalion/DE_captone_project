@@ -6,13 +6,13 @@ This project involves an end-to-end ETL process using the Brazilian E-Commerce d
 
 ## Project Structure
 
-airflow/ - Contains Apache Airflow configuration, DAGs, and utilities.
-dbt_bigquery/ - Contains dbt project files for transformation and modeling.
-postgres/ - Includes the datasets in csv formats and SQL scripts to create PostgreSQL schema and table for data ingestion.
-schema/ - SQL schema files for database setup.
-utils/ - Utility scripts for various data processing tasks.
-docker-compose.yml - Docker Compose configuration for setting up services.
-Dockerfile - Dockerfile for building the Docker image with dependencies.
+airflow/: Contains Apache Airflow configuration, DAGs, and utilities.
+dbt_bigquery/: Contains dbt project files for transformation and modeling.
+postgres/: Includes datasets in CSV formats and SQL scripts to create PostgreSQL schema and tables for data ingestion.
+schema/: SQL schema files for database setup.
+utils/: Utility scripts for various data processing tasks.
+docker-compose.yml: Docker Compose configuration for setting up services.
+Dockerfile: Dockerfile for building the Docker image with dependencies.
 
 ### Prerequisites
 
@@ -58,19 +58,11 @@ docker ps
 
 ## Data Ingestion into PostgreSQL
 
-After running the docker compose file, data is automatically ingested to postgres done by the init.sql file. 
-
-The database details should be defined in your .env file.
-
-**NOTE**: postgres was my host because it's my postgres service name on the docker compose file. You can do well well to change it if you want but just note
-
-that airflow would have issues connecting to your database if the host name is different from the postgres service name.
+After running the Docker Compose file, data is automatically ingested into PostgreSQL using the init.sql file. The database details is defined in the .env file which of course is invincible.
 
 ## Airflow DAGs
 
-The DAG ```postgres_to_bq.py``` that's scheduled to run daily is used to orchestrate the ETL process. 
-
-It extracts data from postgres and load to Google BigQuery. The DAG can be found in airflow/dags 
+The DAG ```postgres_to_bq.py```, scheduled to run daily, orchestrates the ETL process. It extracts data from PostgreSQL and loads it into Google BigQuery. The DAG can be found in airflow/dags.
 
 If all services are healthy, access the Airflow web UI to monitor and manage DAGs at http://localhost:8080.
 
@@ -95,9 +87,8 @@ dbt run --models final
 ```
 
 ##  Data Analysis and Querying
-The final models was further used to answer these questions. You can query the final models in BigQuery to gain insights from the data.
+The final models can be queried in BigQuery to gain insights from the data. Key questions to address include:
 
-## Questions
 - Which product categories have the highest sales?
 - What is the average delivery time for orders?
 - Which states have the highest number of orders?

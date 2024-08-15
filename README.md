@@ -4,6 +4,8 @@
 
 This project involves an end-to-end ETL process using the Brazilian E-Commerce dataset. It includes data extraction, transformation, and loading into Google BigQuery using tools like PostgreSQL, Docker, Apache Airflow, dbt, and BigQuery.
 
+![Group 9](https://github.com/user-attachments/assets/11df794b-b3bf-4aae-982f-1d0bbdfa0845)
+
 ## Project Structure
 
 airflow/: Contains Apache Airflow configuration, DAGs, and utilities.

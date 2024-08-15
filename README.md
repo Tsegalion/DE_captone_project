@@ -2,10 +2,9 @@
 
 ## Overview
 
-This project involves an end-to-end ETL process using the Brazilian E-Commerce dataset. It includes data extraction, transformation, and loading into Google BigQuery using tools like PostgreSQL, Docker, Apache Airflow, dbt, and BigQuery.
-
-
 ![Group 9](https://github.com/user-attachments/assets/11df794b-b3bf-4aae-982f-1d0bbdfa0845)
+
+This project involves an end-to-end ETL process using the Brazilian E-Commerce dataset. It includes data extraction, transformation, and loading into Google BigQuery using tools like PostgreSQL, Docker, Apache Airflow, dbt, and BigQuery.
 
 
 ## Project Structure
@@ -55,7 +54,7 @@ Ensure that all services (Airflow, PostgreSQL) are running as expected. Open a n
 docker ps
 ```
 
-![alt text](image.png)
+![Screenshot 2024-08-14 232754](https://github.com/user-attachments/assets/14eb9586-731d-448d-b428-0c3e4ebfb743)
 
 
 ## Workflow
@@ -70,7 +69,7 @@ The DAG ```postgres_to_bq.py```, scheduled to run daily, orchestrates the ETL pr
 
 If all services are healthy, access the Airflow web UI to monitor and manage DAGs at http://localhost:8080.
 
-![alt text](image-1.png)
+![Screenshot 2024-08-14 235110](https://github.com/user-attachments/assets/8f83a552-4676-45f7-83a1-21f35d97f6e7)
 
 ## Data Transformation and Modeling with dbt
 

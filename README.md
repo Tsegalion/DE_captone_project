@@ -1,20 +1,20 @@
 # Brazilian E-Commerce ETL Project
 
+![Group 9](https://github.com/user-attachments/assets/11df794b-b3bf-4aae-982f-1d0bbdfa0845)
+
 ## Overview
 
 This project involves an end-to-end ETL process using the Brazilian E-Commerce dataset. It includes data extraction, transformation, and loading into Google BigQuery using tools like PostgreSQL, Docker, Apache Airflow, dbt, and BigQuery.
 
-![Group 9](https://github.com/user-attachments/assets/11df794b-b3bf-4aae-982f-1d0bbdfa0845)
-
 ## Project Structure
 
-airflow/: Contains Apache Airflow configuration, DAGs, and utilities.
-dbt_bigquery/: Contains dbt project files for transformation and modeling.
-postgres/: Includes datasets in CSV formats and SQL scripts to create PostgreSQL schema and tables for data ingestion.
-schema/: SQL schema files for database setup.
-utils/: Utility scripts for various data processing tasks.
-docker-compose.yml: Docker Compose configuration for setting up services.
-Dockerfile: Dockerfile for building the Docker image with dependencies.
+- airflow/: Contains Apache Airflow configuration, DAGs, and utilities.
+- dbt_bigquery/: Contains dbt project files for transformation and modeling.
+- postgres/: Includes datasets in CSV formats and SQL scripts to create PostgreSQL schema and tables for data ingestion.
+- schema/: SQL schema files for database setup.
+- utils/: Utility scripts for various data processing tasks.
+- docker-compose.yml: Docker Compose configuration for setting up services.
+- Dockerfile: Dockerfile for building the Docker image with dependencies.
 
 ### Prerequisites
 

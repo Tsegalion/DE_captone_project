@@ -1,8 +1,8 @@
-# Brazilian E-Commerce ETL Project
+# Brazilian E-Commerce ELT Project
 
 ## Overview
 
-This project involves an end-to-end ETL process using the Brazilian E-Commerce dataset. It includes data extraction, transformation, and loading into Google BigQuery using tools like PostgreSQL, Docker, Apache Airflow, dbt, and BigQuery.
+This project involves an end-to-end ELT process using the Brazilian E-Commerce dataset. It includes data extraction, transformation, and loading into Google BigQuery using tools like PostgreSQL, Docker, Apache Airflow, dbt, and BigQuery.
 
 ## Data Architecture
 

@@ -3,7 +3,7 @@ FROM apache/airflow:2.9.1
 # Set the working directory to your project root
 WORKDIR /DE_capstone_project
 
-# Set PYTHONPATH to the project root
+# Set PYTHONPATH to the project root which helps Python locate your modules.
 ENV PYTHONPATH=/DE_capstone_project
 
 # Copy the project files into the container

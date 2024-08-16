@@ -81,6 +81,8 @@ If all services are healthy, access the Airflow web UI to monitor and manage DAG
     - ```int_orders_by_state.sql``` counts the number of orders per state.
 - ```Final Models```: Located in dbt_bigquery/models/final/. These models generate the final results and insights from the intermediate models
 
+More detailed explanation of the models is found on the dbt readme file here
+
 To run the dbt models:
 
 ```plaintext

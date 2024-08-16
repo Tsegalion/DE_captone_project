@@ -7,16 +7,16 @@ Purpose: To extract and prepare the raw product data by including necessary join
 
 ## stg_orders
 
-Purpose: To gather raw order data and enrich it by joining with customer, order_items and product table. This model provides a comprehensive view of each order, including customer location and product details, which is essential for further analysis.
+Purpose: This model extracts raw order data and enriches it by joining with the customers, order_items, and products tables. It focuses on including only the necessary columns to prevent excessive data volume in BigQuery. Specifically, not filtering or aggregating data early on can lead to large datasets with many columns or rows, which can result in increased storage costs and slower query performance. By including only essential columns and relevant data, this model ensures that subsequent analyses are performed on a manageable dataset, enhancing efficiency and effectiveness.
 
 ## 2. Intermediate Models
 ## int_orders_by_state
 
-Purpose: To aggregate and count the number of orders for each state. This model helps in understanding the distribution of orders across different states, providing insights into regional sales performance.
+Purpose: To aggregate and count the number of orders for each state from the ```stg_orders``` model. This model helps in understanding the distribution of orders across different states, providing insights into regional sales performance.
 
 ## int_sales_by_category
 
-Purpose: To aggregate sales data by product category, calculating metrics such as total orders, total sales, and average sales per order. This model provides insights into which product categories are performing best in terms of sales.
+Purpose: To aggregate sales data by product category, calculating metrics such as total orders, total sales, and average sales per order. This model joins both the ```stg_orders``` and ```stg_products``` model to provide insights into which product categories are performing best in terms of sales.
 
 ## int_avg_delivery_time
 
@@ -26,12 +26,12 @@ Purpose: To calculate the delivery time in days for each order. This model is us
 
 ## fct_sales_by_category
 
-Purpose: To consolidate and present the final sales metrics by product category, including total orders, total sales, and average sales. This model provides a summarized view of sales performance by category, ready for reporting and analysis.
+Purpose: To consolidate and present the final sales metrics by product category, including total orders, total sales, and average sales. This model provides a summarized view of sales performance by category from the ```int_sales_by_category``` model.
 
 ## fct_avg_delivery_time
 
-Purpose: To calculate the average delivery time across all orders, rounded to the nearest whole number. This model provides a final, rounded measure of overall delivery performance.
+Purpose: To calculate the average delivery time across all orders, rounded to the nearest whole number. This model provides a final, rounded measure of overall delivery performance from the ```int_avg_delivery_time``` model.
 
 ## fct_orders_by_state
 
-Purpose: To present the final count of orders by state, consolidating the intermediate results. This model gives a clear view of order distribution by state, useful for regional performance analysis.
+Purpose: To present the final count of orders by state, consolidating the intermediate results. This model gets from the ```int_orders_by_state``` model a clear view of order distribution by state, useful for regional performance analysis.

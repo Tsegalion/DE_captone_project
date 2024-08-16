@@ -1,4 +1,4 @@
-# Brazilian E-Commerce ELT Project
+# Data Engineering Capstone Project
 
 ## Overview
 
